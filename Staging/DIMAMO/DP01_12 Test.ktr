@@ -1,6 +1,6 @@
 <transformation>
   <info>
-    <name>DP01_12 Adjust Residencies for Temporary Migration</name>
+    <name>DP01_12 Test</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -481,14 +481,14 @@
     <created_user>-</created_user>
     <created_date>2020/01/10 08:53:00.845</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2021/01/01 06:19:46.370</modified_date>
+    <modified_date>2021/01/01 18:58:36.737</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
     <notepad>
       <note>This part adds Residency Status Observations and detect episodes of non-residency</note>
-      <xloc>704</xloc>
+      <xloc>912</xloc>
       <yloc>32</yloc>
       <width>672</width>
       <heigth>34</heigth>
@@ -510,7 +510,7 @@
     <notepad>
       <note>This part adjust the start and end of residency episodes based on non-residency and drop non-resident episodes</note>
       <xloc>720</xloc>
-      <yloc>352</yloc>
+      <yloc>576</yloc>
       <width>905</width>
       <heigth>34</heigth>
       <fontname>Segoe UI</fontname>
@@ -597,16 +597,6 @@
     <hop>
       <from>ResidentStatus</from>
       <to>IndividualUid LocationUid ObservationDate</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>IndividualUid LocationUid StartDate</from>
-      <to>Multiway merge join</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>IndividualUid LocationUid ObservationDate</from>
-      <to>Multiway merge join</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -720,13 +710,48 @@
       <enabled>N</enabled>
     </hop>
     <hop>
-      <from>IndividualUid StartDate</from>
-      <to>Serialize to IndividualResidencies</to>
+      <from>Fix null values</from>
+      <to>Analytic query 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Fix null values</from>
-      <to>Analytic query 2</to>
+      <from>Test Cases</from>
+      <to>IndividualUid</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>IndividualUid LocationUid StartDate</from>
+      <to>Multiway merge join 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>IndividualUid</from>
+      <to>Multiway merge join 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Multiway merge join 2</from>
+      <to>Multiway merge join</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>IndividualUid LocationUid ObservationDate</from>
+      <to>Multiway merge join 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Multiway merge join 3</from>
+      <to>Multiway merge join</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Test Cases 2</from>
+      <to>IndividualUid 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>IndividualUid 2</from>
+      <to>Multiway merge join 3</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -784,7 +809,7 @@ var episode=0</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1872</xloc>
+      <xloc>2080</xloc>
       <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
@@ -914,7 +939,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
     </remotesteps>
     <GUI>
       <xloc>608</xloc>
-      <yloc>560</yloc>
+      <yloc>960</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1043,7 +1068,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
     </remotesteps>
     <GUI>
       <xloc>832</xloc>
-      <yloc>560</yloc>
+      <yloc>960</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1104,7 +1129,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1648</xloc>
+      <xloc>1856</xloc>
       <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1160,8 +1185,8 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>416</yloc>
+      <xloc>64</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1269,7 +1294,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2112</xloc>
+      <xloc>2320</xloc>
       <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1294,8 +1319,8 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>848</xloc>
-      <yloc>224</yloc>
+      <xloc>1056</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1320,7 +1345,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
     </remotesteps>
     <GUI>
       <xloc>1056</xloc>
-      <yloc>560</yloc>
+      <yloc>960</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1371,7 +1396,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
     </remotesteps>
     <GUI>
       <xloc>1504</xloc>
-      <yloc>416</yloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1419,7 +1444,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2320</xloc>
+      <xloc>2528</xloc>
       <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1451,7 +1476,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
     </remotesteps>
     <GUI>
       <xloc>384</xloc>
-      <yloc>416</yloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1538,7 +1563,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1376</xloc>
+      <xloc>1584</xloc>
       <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1597,7 +1622,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
     </remotesteps>
     <GUI>
       <xloc>384</xloc>
-      <yloc>224</yloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1705,7 +1730,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
     </remotesteps>
     <GUI>
       <xloc>2016</xloc>
-      <yloc>416</yloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1721,8 +1746,8 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
       <schema_name/>
     </partitioning>
     <join_type>FULL OUTER</join_type>
-    <step0>IndividualUid LocationUid StartDate</step0>
-    <step1>IndividualUid LocationUid ObservationDate</step1>
+    <step0>Multiway merge join 2</step0>
+    <step1>Multiway merge join 3</step1>
     <number_input>2</number_input>
     <keys>
       <key>IndividualUid,LocationUid</key>
@@ -1737,7 +1762,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
+      <xloc>832</xloc>
       <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1769,7 +1794,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
     </remotesteps>
     <GUI>
       <xloc>1280</xloc>
-      <yloc>416</yloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1813,7 +1838,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
     </remotesteps>
     <GUI>
       <xloc>1056</xloc>
-      <yloc>416</yloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1890,7 +1915,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
     </remotesteps>
     <GUI>
       <xloc>832</xloc>
-      <yloc>416</yloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1948,7 +1973,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>848</xloc>
+      <xloc>1056</xloc>
       <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2026,7 +2051,7 @@ Alert(dateDiff(d1,d2,"wd"));</jsScript_script>
     </remotesteps>
     <GUI>
       <xloc>608</xloc>
-      <yloc>416</yloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2196,7 +2221,7 @@ FROM SmoothedStatus</sql>
     </remotesteps>
     <GUI>
       <xloc>80</xloc>
-      <yloc>224</yloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2229,38 +2254,8 @@ FROM SmoothedStatus</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1088</xloc>
+      <xloc>1296</xloc>
       <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Serialize to IndividualResidencies</name>
-    <type>CubeOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <file>
-      <name>${BaseDirectory}\${NodeDirectory}\${StagingDirectory}\IndividualResidencies.cube</name>
-      <add_to_result_filenames>N</add_to_result_filenames>
-      <do_not_open_newfile_init>Y</do_not_open_newfile_init>
-    </file>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2240</xloc>
-      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2318,7 +2313,295 @@ FROM SmoothedStatus</sql>
     </remotesteps>
     <GUI>
       <xloc>1760</xloc>
-      <yloc>416</yloc>
+      <yloc>816</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Test Cases</name>
+    <type>DataGrid</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>IndividualUid</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>36</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
+      </field>
+      <field>
+        <name>IndividualId</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
+      </field>
+    </fields>
+    <data>
+      <line>
+        <item>0017FA38-69F1-E811-B803-00505696B21A</item>
+        <item>82</item>
+      </line>
+      <line>
+        <item>0088E114-E49D-E911-B80D-00505696B21A</item>
+        <item>295</item>
+      </line>
+      <line>
+        <item>03172C39-69F1-E811-B803-00505696B21A</item>
+        <item>1537</item>
+      </line>
+      <line>
+        <item>031B2C39-69F1-E811-B803-00505696B21A</item>
+        <item>1549</item>
+      </line>
+    </data>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>IndividualUid</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>IndividualUid</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Multiway merge join 2</name>
+    <type>MultiwayMergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <step0>IndividualUid LocationUid StartDate</step0>
+    <step1>IndividualUid</step1>
+    <number_input>2</number_input>
+    <keys>
+      <key>IndividualUid</key>
+      <key>IndividualUid</key>
+    </keys>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Multiway merge join 3</name>
+    <type>MultiwayMergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <join_type>INNER</join_type>
+    <step0>IndividualUid LocationUid ObservationDate</step0>
+    <step1>IndividualUid 2</step1>
+    <number_input>2</number_input>
+    <keys>
+      <key>IndividualUid</key>
+      <key>IndividualUid</key>
+    </keys>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Test Cases 2</name>
+    <type>DataGrid</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>IndividualUid</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>36</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
+      </field>
+      <field>
+        <name>IndividualId</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+        <field_null_if/>
+      </field>
+    </fields>
+    <data>
+      <line>
+        <item>0017FA38-69F1-E811-B803-00505696B21A</item>
+        <item>82</item>
+      </line>
+      <line>
+        <item>0088E114-E49D-E911-B80D-00505696B21A</item>
+        <item>295</item>
+      </line>
+      <line>
+        <item>03172C39-69F1-E811-B803-00505696B21A</item>
+        <item>1537</item>
+      </line>
+      <line>
+        <item>031B2C39-69F1-E811-B803-00505696B21A</item>
+        <item>1549</item>
+      </line>
+    </data>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>84</xloc>
+      <yloc>354</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>IndividualUid 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>IndividualUid</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>354</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

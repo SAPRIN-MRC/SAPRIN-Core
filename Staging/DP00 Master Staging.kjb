@@ -8,7 +8,7 @@
   <created_user>-</created_user>
   <created_date>2019/09/05 08:45:51.684</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2020/12/27 15:44:25.312</modified_date>
+  <modified_date>2021/01/01 07:04:19.030</modified_date>
   <parameters>
     </parameters>
   <slaveservers>
@@ -376,7 +376,7 @@
         </field>
         <field>
           <variable_name>BaseDirectory</variable_name>
-          <variable_value>E:\Data\SAPRIN_Data</variable_value>
+          <variable_value>D:\Data\SAPRIN_Data</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
@@ -391,12 +391,12 @@
         </field>
         <field>
           <variable_name>PeriodEnd</variable_name>
-          <variable_value>2019-12-31</variable_value>
+          <variable_value>2018-12-31</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
           <variable_name>LTFCutOff</variable_name>
-          <variable_value>2018-01-01</variable_value>
+          <variable_value>2017-01-01</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
@@ -416,12 +416,12 @@
         </field>
         <field>
           <variable_name>IncludeAHRI</variable_name>
-          <variable_value>Y</variable_value>
+          <variable_value>N</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
           <variable_name>IncludeDIMAMO</variable_name>
-          <variable_value>N</variable_value>
+          <variable_value>Y</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
@@ -472,6 +472,54 @@
       <attributes_kjc/>
     </entry>
     <entry>
+      <name>Step 02</name>
+      <description/>
+      <type>SIMPLE_EVAL</type>
+      <attributes/>
+      <valuetype>variable</valuetype>
+      <fieldname/>
+      <variablename>NextStep</variablename>
+      <fieldtype>string</fieldtype>
+      <mask/>
+      <comparevalue>S02</comparevalue>
+      <minvalue/>
+      <maxvalue/>
+      <successcondition>equal</successcondition>
+      <successnumbercondition>equal</successnumbercondition>
+      <successbooleancondition>false</successbooleancondition>
+      <successwhenvarset>N</successwhenvarset>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>576</xloc>
+      <yloc>320</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Step 03</name>
+      <description/>
+      <type>SIMPLE_EVAL</type>
+      <attributes/>
+      <valuetype>variable</valuetype>
+      <fieldname/>
+      <variablename>NextStep</variablename>
+      <fieldtype>string</fieldtype>
+      <mask/>
+      <comparevalue>S03</comparevalue>
+      <minvalue/>
+      <maxvalue/>
+      <successcondition>equal</successcondition>
+      <successnumbercondition>equal</successnumbercondition>
+      <successbooleancondition>false</successbooleancondition>
+      <successwhenvarset>N</successwhenvarset>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>576</xloc>
+      <yloc>512</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
       <name>DP01 DIMAMO Staging</name>
       <description/>
       <type>JOB</type>
@@ -509,30 +557,6 @@
       <attributes_kjc/>
     </entry>
     <entry>
-      <name>Step 02</name>
-      <description/>
-      <type>SIMPLE_EVAL</type>
-      <attributes/>
-      <valuetype>variable</valuetype>
-      <fieldname/>
-      <variablename>NextStep</variablename>
-      <fieldtype>string</fieldtype>
-      <mask/>
-      <comparevalue>S02</comparevalue>
-      <minvalue/>
-      <maxvalue/>
-      <successcondition>equal</successcondition>
-      <successnumbercondition>equal</successnumbercondition>
-      <successbooleancondition>false</successbooleancondition>
-      <successwhenvarset>N</successwhenvarset>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>576</xloc>
-      <yloc>256</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
       <name>DP02 Agincourt Staging</name>
       <description/>
       <type>JOB</type>
@@ -566,31 +590,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>1312</xloc>
-      <yloc>256</yloc>
-      <attributes_kjc/>
-    </entry>
-    <entry>
-      <name>Step 03</name>
-      <description/>
-      <type>SIMPLE_EVAL</type>
-      <attributes/>
-      <valuetype>variable</valuetype>
-      <fieldname/>
-      <variablename>NextStep</variablename>
-      <fieldtype>string</fieldtype>
-      <mask/>
-      <comparevalue>S03</comparevalue>
-      <minvalue/>
-      <maxvalue/>
-      <successcondition>equal</successcondition>
-      <successnumbercondition>equal</successnumbercondition>
-      <successbooleancondition>false</successbooleancondition>
-      <successwhenvarset>N</successwhenvarset>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>576</xloc>
-      <yloc>352</yloc>
+      <yloc>320</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -627,7 +627,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>1312</xloc>
-      <yloc>352</yloc>
+      <yloc>512</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -675,7 +675,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>672</xloc>
-      <yloc>256</yloc>
+      <yloc>320</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -699,7 +699,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>672</xloc>
-      <yloc>352</yloc>
+      <yloc>512</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -754,7 +754,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>1056</xloc>
-      <yloc>256</yloc>
+      <yloc>320</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -781,7 +781,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>864</xloc>
-      <yloc>256</yloc>
+      <yloc>320</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -808,7 +808,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>864</xloc>
-      <yloc>352</yloc>
+      <yloc>512</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -822,7 +822,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>1056</xloc>
-      <yloc>352</yloc>
+      <yloc>512</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -869,8 +869,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Step 01</from>
-      <to>Include?</to>
+      <from>Include?</from>
+      <to>Set Node DIMAMO</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -878,8 +878,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Include?</from>
-      <to>Set Node DIMAMO</to>
+      <from>Step 01</from>
+      <to>Include?</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -905,8 +905,26 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>DP01 DIMAMO Staging</from>
+      <from>Include? (2)</from>
+      <to>Set Node Agincourt (6)</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Include?</from>
       <to>Include? (2)</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Create Staging folder 2</from>
+      <to>DP02 Agincourt Staging</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -920,60 +938,6 @@
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Include?</from>
-      <to>Include? (2)</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Step 02</from>
-      <to>Include? (2)</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Include? (2)</from>
-      <to>Set Node Agincourt (6)</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Set Node Agincourt (6)</from>
-      <to>Create Staging folder 2</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Create Staging folder 2</from>
-      <to>DP02 Agincourt Staging</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>DP02 Agincourt Staging</from>
-      <to>Include? (3)</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
@@ -995,8 +959,26 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
+      <from>Step 02</from>
+      <to>Include? (2)</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
       <from>Create Staging folder 3</from>
       <to>DP03 AHRI Staging</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Step 03</from>
+      <to>Include? (3)</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1022,7 +1004,25 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Step 03</from>
+      <from>Set Node Agincourt (6)</from>
+      <to>Create Staging folder 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>DP01 DIMAMO Staging</from>
+      <to>Include? (2)</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>DP02 Agincourt Staging</from>
       <to>Include? (3)</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>

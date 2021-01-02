@@ -6,7 +6,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>/SAPRIN Core Dataset/DIMAMO</directory>
+    <directory>/Staging/DIMAMO</directory>
     <parameters>
     </parameters>
     <log>
@@ -481,7 +481,7 @@
     <created_user>-</created_user>
     <created_date>2020/01/10 05:06:07.100</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2020/03/19 14:26:54.894</modified_date>
+    <modified_date>2021/01/01 06:16:01.302</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -568,7 +568,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>288</xloc>
+      <xloc>368</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
@@ -609,7 +609,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
+      <xloc>560</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
@@ -700,7 +700,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1224</xloc>
+      <xloc>1296</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
@@ -740,7 +740,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1024</xloc>
+      <xloc>1104</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
@@ -770,7 +770,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1568</xloc>
+      <xloc>1696</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
@@ -787,7 +787,7 @@
       <schema_name/>
     </partitioning>
     <file>
-      <name>${BaseDirectory}\${NodeDirectory}\${DayExtractionDirectory}\IndividualResidencyDaysIntermediate.cube</name>
+      <name>${BaseDirectory}\${NodeDirectory}\${StagingDirectory}\IndividualResidencyDaysIntermediate.cube</name>
     </file>
     <limit>0</limit>
     <addfilenameresult>N</addfilenameresult>
@@ -833,7 +833,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1376</xloc>
+      <xloc>1456</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
@@ -894,7 +894,7 @@ var Gap=0;</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
+      <xloc>736</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
@@ -964,7 +964,7 @@ var Gap=0;</jsScript_script>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>848</xloc>
+      <xloc>928</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>

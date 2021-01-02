@@ -8,7 +8,7 @@
   <created_user>-</created_user>
   <created_date>2017/10/09 15:51:27.587</created_date>
   <modified_user>kherbst</modified_user>
-  <modified_date>2020/12/27 16:32:42.707</modified_date>
+  <modified_date>2020/12/28 13:48:54.575</modified_date>
   <parameters>
     <parameter>
       <name>DATA_PATH_1</name>
@@ -26,65 +26,6 @@
       <description>Data file path discovered during export</description>
     </parameter>
   </parameters>
-  <connection>
-    <name>PentahoLogDB</name>
-    <server>ACS-DB03</server>
-    <type>MSSQLNATIVE</type>
-    <access>Native</access>
-    <database>PentahoLogs</database>
-    <port>1433</port>
-    <username/>
-    <password>Encrypted </password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>IS_CLUSTERED</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>MSSQLUseIntegratedSecurity</code>
-        <attribute>true</attribute>
-      </attribute>
-      <attribute>
-        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>PORT_NUMBER</code>
-        <attribute>1433</attribute>
-      </attribute>
-      <attribute>
-        <code>PRESERVE_RESERVED_WORD_CASE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>QUOTE_ALL_FIELDS</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>USE_POOLING</code>
-        <attribute>N</attribute>
-      </attribute>
-    </attributes>
-  </connection>
   <slaveservers>
     <slaveserver>
       <name>acs-etl01</name>
@@ -757,7 +698,7 @@
       <fields>
         <field>
           <variable_name>NextStep</variable_name>
-          <variable_value>S01</variable_value>
+          <variable_value>S06</variable_value>
           <variable_type>CURRENT_JOB</variable_type>
         </field>
         <field>
@@ -1136,7 +1077,7 @@
       <trans_object_id/>
       <filename/>
       <transname>DP03_06 Extract EducationStatus</transname>
-      <directory>/Staging</directory>
+      <directory>/Staging/AHRI</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -1264,7 +1205,7 @@
       <trans_object_id/>
       <filename/>
       <transname>DP03_08 Extract Marital Statuses</transname>
-      <directory>/Staging</directory>
+      <directory>/Staging/AHRI</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>

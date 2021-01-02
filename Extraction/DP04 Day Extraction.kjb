@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <job>
   <name>DP04 Day Extraction</name>
   <description/>
@@ -16,11 +15,11 @@ EndObservationDate
 EndType</extended_description>
   <job_version>V1.0</job_version>
   <job_status>1</job_status>
-  <directory>/</directory>
+  <directory>/Extraction</directory>
   <created_user>-</created_user>
   <created_date>2017/10/20 07:48:47.958</created_date>
   <modified_user>kherbst</modified_user>
-  <modified_date>2020/01/08 10:39:24.423</modified_date>
+  <modified_date>2020/12/30 16:39:16.602</modified_date>
   <parameters>
     <parameter>
       <name>DATA_PATH_1</name>
@@ -725,7 +724,7 @@ EndType</extended_description>
       <trans_object_id/>
       <filename/>
       <transname>DP04_01 Residency Days Extraction</transname>
-      <directory>${Internal.Entry.Current.Directory}</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -745,6 +744,7 @@ EndType</extended_description>
       <create_parent_folder>N</create_parent_folder>
       <logging_remote_work>N</logging_remote_work>
       <run_configuration>Pentaho local</run_configuration>
+      <suppress_result_data>N</suppress_result_data>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
@@ -778,7 +778,7 @@ EndType</extended_description>
       <trans_object_id/>
       <filename/>
       <transname>DP04_02 Household Residency Day Extraction</transname>
-      <directory>${Internal.Entry.Current.Directory}</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -798,6 +798,7 @@ EndType</extended_description>
       <create_parent_folder>N</create_parent_folder>
       <logging_remote_work>N</logging_remote_work>
       <run_configuration>Pentaho local</run_configuration>
+      <suppress_result_data>N</suppress_result_data>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
@@ -817,7 +818,7 @@ EndType</extended_description>
       <trans_object_id/>
       <filename/>
       <transname>DP04_03 Household Membership Day Extraction</transname>
-      <directory>${Internal.Entry.Current.Directory}</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -837,6 +838,7 @@ EndType</extended_description>
       <create_parent_folder>N</create_parent_folder>
       <logging_remote_work>N</logging_remote_work>
       <run_configuration>Pentaho local</run_configuration>
+      <suppress_result_data>N</suppress_result_data>
       <parameters>
         <pass_all_parameters>Y</pass_all_parameters>
       </parameters>
@@ -946,10 +948,6 @@ EndType</extended_description>
     </group>
     <group>
       <name>{"_":"Embedded MetaStore Elements","namespace":"pentaho","type":"Default Run Configuration"}</name>
-      <attribute>
-        <key>Pentaho local</key>
-        <value>{"children":[{"children":[],"id":"server","value":null},{"children":[],"id":"clustered","value":"N"},{"children":[],"id":"name","value":"Pentaho local"},{"children":[],"id":"description","value":null},{"children":[],"id":"pentaho","value":"N"},{"children":[],"id":"readOnly","value":"Y"},{"children":[],"id":"sendResources","value":"N"},{"children":[],"id":"logRemoteExecutionLocally","value":"N"},{"children":[],"id":"remote","value":"N"},{"children":[],"id":"local","value":"Y"},{"children":[],"id":"showTransformations","value":"N"}],"id":"Pentaho local","value":null,"name":"Pentaho local","owner":null,"ownerPermissionsList":[]}</value>
-      </attribute>
     </group>
   </attributes>
 </job>

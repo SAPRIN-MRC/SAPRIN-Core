@@ -8,7 +8,7 @@
   <created_user>-</created_user>
   <created_date>2017/10/09 15:51:27.587</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2020/12/27 16:40:30.301</modified_date>
+  <modified_date>2021/01/01 07:08:17.688</modified_date>
   <parameters>
     <parameter>
       <name>DATA_PATH_1</name>
@@ -698,7 +698,7 @@
       <fields>
         <field>
           <variable_name>NextStep</variable_name>
-          <variable_value>S04</variable_value>
+          <variable_value>S05</variable_value>
           <variable_type>CURRENT_JOB</variable_type>
         </field>
         <field>
@@ -714,11 +714,6 @@
         <field>
           <variable_name>NodeId</variable_name>
           <variable_value>2</variable_value>
-          <variable_type>JVM</variable_type>
-        </field>
-        <field>
-          <variable_name>PeriodEnd</variable_name>
-          <variable_value>2019-12-31</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
@@ -1156,7 +1151,7 @@
       <trans_object_id/>
       <filename/>
       <transname>DP01_07 Extract SocioEconomic Status</transname>
-      <directory>/Staging/DIMAMO/DIMAMO</directory>
+      <directory>/Staging/DIMAMO</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -1219,7 +1214,7 @@
       <specification_method>rep_name</specification_method>
       <trans_object_id/>
       <filename/>
-      <transname>DP01_08 Extract Marital Statuses.ktr</transname>
+      <transname>DP01_08 Extract Marital Statuses</transname>
       <directory>/Staging/DIMAMO</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -1259,8 +1254,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1264</xloc>
-      <yloc>1184</yloc>
+      <xloc>752</xloc>
+      <yloc>1248</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -1295,7 +1290,7 @@
       <specification_method>rep_name</specification_method>
       <trans_object_id/>
       <filename/>
-      <transname>DP01_09 Labour Status.ktr</transname>
+      <transname>DP01_09 Labour Status</transname>
       <directory>/Staging/DIMAMO</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -1363,7 +1358,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1056</xloc>
+      <xloc>1200</xloc>
       <yloc>432</yloc>
       <attributes_kjc/>
     </entry>
@@ -1467,8 +1462,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1344</xloc>
-      <yloc>432</yloc>
+      <xloc>1200</xloc>
+      <yloc>560</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -1507,8 +1502,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1616</xloc>
-      <yloc>432</yloc>
+      <xloc>1200</xloc>
+      <yloc>656</yloc>
       <attributes_kjc/>
     </entry>
   </entries>

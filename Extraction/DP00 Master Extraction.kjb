@@ -4,11 +4,11 @@
   <extended_description/>
   <job_version>V1.0</job_version>
   <job_status>1</job_status>
-  <directory>/SAPRIN Core Dataset</directory>
+  <directory>/Extraction</directory>
   <created_user>-</created_user>
   <created_date>2017/10/09 15:46:44.895</created_date>
   <modified_user>kherbst</modified_user>
-  <modified_date>2020/05/10 07:39:05.402</modified_date>
+  <modified_date>2020/12/30 16:39:18.598</modified_date>
   <parameters>
     </parameters>
   <slaveservers>
@@ -785,9 +785,9 @@
       <attributes/>
       <specification_method>rep_name</specification_method>
       <job_object_id/>
-      <filename>/SAPRIN Core Dataset/DP04 Day Extraction.kjb</filename>
+      <filename/>
       <jobname>DP04 Day Extraction</jobname>
-      <directory>/SAPRIN Core Dataset</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -846,9 +846,9 @@
       <attributes/>
       <specification_method>rep_name</specification_method>
       <job_object_id/>
-      <filename>/SAPRIN Core Dataset/DP05 Consolidate Days.kjb</filename>
+      <filename/>
       <jobname>DP05 Consolidate Days</jobname>
-      <directory>/SAPRIN Core Dataset</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -907,9 +907,9 @@
       <attributes/>
       <specification_method>rep_name</specification_method>
       <job_object_id/>
-      <filename>/SAPRIN Core Dataset/DP06 Expand StatusObservations.kjb</filename>
+      <filename/>
       <jobname>DP06 Expand StatusObservations</jobname>
-      <directory>/SAPRIN Core Dataset</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -968,9 +968,9 @@
       <attributes/>
       <specification_method>rep_name</specification_method>
       <job_object_id/>
-      <filename>/SAPRIN Core Dataset/DP07 Combine StatusObservations.kjb</filename>
+      <filename/>
       <jobname>DP07 Combine StatusObservations</jobname>
-      <directory>/SAPRIN Core Dataset</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -1031,7 +1031,7 @@
       <job_object_id/>
       <filename/>
       <jobname>DP08 Produce Episodes</jobname>
-      <directory>${Internal.Entry.Current.Directory}</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -1262,10 +1262,6 @@
     </group>
     <group>
       <name>{"_":"Embedded MetaStore Elements","namespace":"pentaho","type":"Default Run Configuration"}</name>
-      <attribute>
-        <key>Pentaho local</key>
-        <value>{"children":[{"children":[],"id":"server","value":null},{"children":[],"id":"clustered","value":"N"},{"children":[],"id":"name","value":"Pentaho local"},{"children":[],"id":"description","value":null},{"children":[],"id":"pentaho","value":"N"},{"children":[],"id":"readOnly","value":"Y"},{"children":[],"id":"sendResources","value":"N"},{"children":[],"id":"logRemoteExecutionLocally","value":"N"},{"children":[],"id":"remote","value":"N"},{"children":[],"id":"local","value":"Y"},{"children":[],"id":"showTransformations","value":"N"}],"id":"Pentaho local","value":null,"name":"Pentaho local","owner":null,"ownerPermissionsList":[]}</value>
-      </attribute>
     </group>
   </attributes>
 </job>

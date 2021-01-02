@@ -19,7 +19,7 @@ Code 31 is used to designate change in household head</extended_description>
     <trans_version>V1.0</trans_version>
     <trans_type>Normal</trans_type>
     <trans_status>1</trans_status>
-    <directory>/SAPRIN Core Dataset/DIMAMO</directory>
+    <directory>/Staging/DIMAMO</directory>
     <parameters>
     </parameters>
     <log>
@@ -437,19 +437,6 @@ Code 31 is used to designate change in household head</extended_description>
     </partitionschemas>
     <slaveservers>
       <slaveserver>
-        <name>CHPC</name>
-        <hostname>saprin.chpc.ac.za</hostname>
-        <port>8081</port>
-        <webAppName/>
-        <username>cluster</username>
-        <password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password>
-        <proxy_hostname/>
-        <proxy_port/>
-        <non_proxy_hosts/>
-        <master>Y</master>
-        <sslMode>N</sslMode>
-      </slaveserver>
-      <slaveserver>
         <name>acs-etl01</name>
         <hostname>acs-etl01</hostname>
         <port>8080</port>
@@ -486,6 +473,19 @@ Code 31 is used to designate change in household head</extended_description>
         <proxy_port/>
         <non_proxy_hosts/>
         <master>N</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>CHPC</name>
+        <hostname>saprin.chpc.ac.za</hostname>
+        <port>8081</port>
+        <webAppName/>
+        <username>cluster</username>
+        <password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>Y</master>
         <sslMode>N</sslMode>
       </slaveserver>
       <slaveserver>
@@ -873,7 +873,7 @@ Code 31 is used to designate change in household head</extended_description>
     <created_user>kherbst</created_user>
     <created_date>2018/01/18 15:23:04.827</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2019/09/10 11:23:19.006</modified_date>
+    <modified_date>2020/12/30 17:31:56.721</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -883,8 +883,8 @@ Code 31 is used to designate change in household head</extended_description>
 Now done in SQL</note>
       <xloc>237</xloc>
       <yloc>21</yloc>
-      <width>168</width>
-      <heigth>42</heigth>
+      <width>248</width>
+      <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
       <fontsize>9</fontsize>
       <fontbold>N</fontbold>
@@ -903,13 +903,13 @@ Now done in SQL</note>
   </notepads>
   <connection>
     <name>SaprinDb_DIMAMO</name>
-    <server>saprin-sqlserver.database.windows.net</server>
+    <server>localhost</server>
     <type>MSSQLNATIVE</type>
     <access>Native</access>
-    <database>SaprinDb_DIMAMO</database>
+    <database>SaprinDb_DIMAMO202012</database>
     <port>1433</port>
-    <username>saprin-sa</username>
-    <password>Encrypted 2be98afc86a959d95fd31a834d788e1de</password>
+    <username/>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -928,7 +928,7 @@ Now done in SQL</note>
       </attribute>
       <attribute>
         <code>MSSQLUseIntegratedSecurity</code>
-        <attribute>false</attribute>
+        <attribute>true</attribute>
       </attribute>
       <attribute>
         <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
@@ -1033,6 +1033,7 @@ Now done in SQL</note>
         <rightvalue>PeriodEnd</rightvalue>
       </condition>
     </compare>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1063,6 +1064,7 @@ Now done in SQL</note>
         <replaceby>PeriodEnd</replaceby>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1096,6 +1098,7 @@ Now done in SQL</note>
         <set_empty_string>N</set_empty_string>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1146,6 +1149,7 @@ Now done in SQL</note>
         <trim_type>none</trim_type>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1201,6 +1205,217 @@ FROM dbo.HHeadRelationships HR
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>IndividualUid</name>
+        <length>36</length>
+        <precision>-1</precision>
+        <origin>HHeadRelationships</origin>
+        <comments>IndividualUid</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_ZA</date_format_locale>
+        <date_format_timezone>Africa/Harare</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>HouseholdUid</name>
+        <length>36</length>
+        <precision>-1</precision>
+        <origin>HHeadRelationships</origin>
+        <comments>HouseholdUid</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_ZA</date_format_locale>
+        <date_format_timezone>Africa/Harare</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>HHRelationshipTypeId</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>HHeadRelationships</origin>
+        <comments>HHRelationshipTypeId</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_ZA</date_format_locale>
+        <date_format_timezone>Africa/Harare</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Date</type>
+        <storagetype>normal</storagetype>
+        <name>StartDate</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>HHeadRelationships</origin>
+        <comments>StartDate</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_ZA</date_format_locale>
+        <date_format_timezone>Africa/Harare</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>StartType</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>HHeadRelationships</origin>
+        <comments>StartType</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_ZA</date_format_locale>
+        <date_format_timezone>Africa/Harare</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Date</type>
+        <storagetype>normal</storagetype>
+        <name>StartObservationDate</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>HHeadRelationships</origin>
+        <comments>StartObservationDate</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_ZA</date_format_locale>
+        <date_format_timezone>Africa/Harare</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Date</type>
+        <storagetype>normal</storagetype>
+        <name>EndDate</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>HHeadRelationships</origin>
+        <comments>EndDate</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_ZA</date_format_locale>
+        <date_format_timezone>Africa/Harare</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>EndType</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>HHeadRelationships</origin>
+        <comments>EndType</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_ZA</date_format_locale>
+        <date_format_timezone>Africa/Harare</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Date</type>
+        <storagetype>normal</storagetype>
+        <name>EndObservationDate</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>HHeadRelationships</origin>
+        <comments>EndObservationDate</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_ZA</date_format_locale>
+        <date_format_timezone>Africa/Harare</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1258,6 +1473,7 @@ FROM dbo.HHeadRelationships HR
         <presorted>N</presorted>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1282,6 +1498,7 @@ FROM dbo.HHeadRelationships HR
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1339,6 +1556,7 @@ FROM dbo.HHeadRelationships HR
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1368,6 +1586,7 @@ FROM dbo.HHeadRelationships HR
       <add_to_result_filenames>N</add_to_result_filenames>
       <do_not_open_newfile_init>Y</do_not_open_newfile_init>
     </file>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1402,6 +1621,7 @@ FROM dbo.HHeadRelationships HR
         <rightvalue>PeriodEnd</rightvalue>
       </condition>
     </compare>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1420,4 +1640,5 @@ FROM dbo.HHeadRelationships HR
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes/>
 </transformation>
