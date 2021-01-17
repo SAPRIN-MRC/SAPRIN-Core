@@ -14,7 +14,7 @@ Code 31 is used to designate change in household head</extended_description>
     <trans_version>V1.0</trans_version>
     <trans_type>Normal</trans_type>
     <trans_status>1</trans_status>
-    <directory>/SAPRIN Core Dataset/Agincourt</directory>
+    <directory>/Staging/Agincourt</directory>
     <parameters>
     </parameters>
     <log>
@@ -868,7 +868,7 @@ Code 31 is used to designate change in household head</extended_description>
     <created_user>kherbst</created_user>
     <created_date>2018/01/18 15:23:05.314</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2020/01/08 09:43:19.885</modified_date>
+    <modified_date>2021/01/05 10:08:27.800</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -1027,6 +1027,8 @@ FROM dbo.IndividualObservations IO
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta/>
     <attributes/>
     <cluster_schema/>
     <remotesteps>

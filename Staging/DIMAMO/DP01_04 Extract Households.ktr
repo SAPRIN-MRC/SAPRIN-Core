@@ -875,7 +875,7 @@ EndCensusRound       Integer
     <created_user>kherbst</created_user>
     <created_date>2018/01/18 15:23:04.421</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2020/12/31 08:02:05.219</modified_date>
+    <modified_date>2021/01/03 13:06:00.921</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -883,8 +883,8 @@ EndCensusRound       Integer
     <notepad>
       <note>Remove time portion of date
 Now done in SQL</note>
-      <xloc>32</xloc>
-      <yloc>32</yloc>
+      <xloc>64</xloc>
+      <yloc>16</yloc>
       <width>241</width>
       <heigth>58</heigth>
       <fontname>Segoe UI</fontname>
@@ -1125,7 +1125,7 @@ Now done in SQL</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
+      <xloc>576</xloc>
       <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1160,7 +1160,7 @@ Now done in SQL</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
+      <xloc>656</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1191,7 +1191,7 @@ Now done in SQL</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
+      <xloc>656</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1225,7 +1225,7 @@ Now done in SQL</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>864</xloc>
+      <xloc>896</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1276,7 +1276,7 @@ Now done in SQL</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
+      <xloc>256</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1328,7 +1328,7 @@ Now done in SQL</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
+      <xloc>1072</xloc>
       <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1374,7 +1374,7 @@ Now done in SQL</note>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1216</xloc>
+      <xloc>1248</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1640,7 +1640,7 @@ FROM dbo.HHeadRelationships HR
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
+      <xloc>416</xloc>
       <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1898,7 +1898,7 @@ FROM dbo.HouseholdResidences HR
       </output>
     </remotesteps>
     <GUI>
-      <xloc>48</xloc>
+      <xloc>80</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1940,7 +1940,7 @@ FROM dbo.HouseholdResidences HR
       </output>
     </remotesteps>
     <GUI>
-      <xloc>880</xloc>
+      <xloc>912</xloc>
       <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1990,7 +1990,7 @@ FROM dbo.HouseholdResidences HR
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1056</xloc>
+      <xloc>1088</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2040,7 +2040,7 @@ FROM dbo.HouseholdResidences HR
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1776</xloc>
+      <xloc>1808</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2065,7 +2065,7 @@ FROM dbo.HouseholdResidences HR
       </output>
     </remotesteps>
     <GUI>
-      <xloc>432</xloc>
+      <xloc>464</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2112,7 +2112,7 @@ FROM dbo.HouseholdResidences HR
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1408</xloc>
+      <xloc>1440</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2146,7 +2146,7 @@ FROM dbo.HouseholdResidences HR
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1216</xloc>
+      <xloc>1248</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2203,7 +2203,7 @@ FROM dbo.HouseholdResidences HR
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
+      <xloc>752</xloc>
       <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2258,7 +2258,7 @@ FROM dbo.HouseholdResidences HR
       </output>
     </remotesteps>
     <GUI>
-      <xloc>864</xloc>
+      <xloc>896</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2319,7 +2319,7 @@ FROM dbo.HouseholdResidences HR
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1584</xloc>
+      <xloc>1616</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2349,7 +2349,7 @@ FROM dbo.HouseholdResidences HR
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2000</xloc>
+      <xloc>2032</xloc>
       <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2384,7 +2384,7 @@ FROM dbo.HouseholdResidences HR
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1408</xloc>
+      <xloc>1440</xloc>
       <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2419,7 +2419,7 @@ FROM dbo.HouseholdResidences HR
       </output>
     </remotesteps>
     <GUI>
-      <xloc>432</xloc>
+      <xloc>464</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
