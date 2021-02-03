@@ -19,7 +19,7 @@ EndType</extended_description>
   <created_user>-</created_user>
   <created_date>2017/10/20 07:48:47.958</created_date>
   <modified_user>kherbst</modified_user>
-  <modified_date>2020/12/30 16:39:16.602</modified_date>
+  <modified_date>2021/01/19 06:11:49.285</modified_date>
   <parameters>
     <parameter>
       <name>DATA_PATH_1</name>
@@ -765,7 +765,7 @@ EndType</extended_description>
       <parallel>Y</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>352</xloc>
+      <xloc>384</xloc>
       <yloc>160</yloc>
       <attributes_kjc/>
     </entry>
