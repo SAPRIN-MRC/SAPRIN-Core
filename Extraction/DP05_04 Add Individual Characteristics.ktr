@@ -6,7 +6,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>/SAPRIN Core Dataset</directory>
+    <directory>/Extraction</directory>
     <parameters>
       <parameter>
         <name>DATA_PATH_1</name>
@@ -439,19 +439,6 @@
     </partitionschemas>
     <slaveservers>
       <slaveserver>
-        <name>CHPC</name>
-        <hostname>saprin.chpc.ac.za</hostname>
-        <port>8081</port>
-        <webAppName/>
-        <username>cluster</username>
-        <password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password>
-        <proxy_hostname/>
-        <proxy_port/>
-        <non_proxy_hosts/>
-        <master>Y</master>
-        <sslMode>N</sslMode>
-      </slaveserver>
-      <slaveserver>
         <name>acs-etl01</name>
         <hostname>acs-etl01</hostname>
         <port>8080</port>
@@ -488,6 +475,19 @@
         <proxy_port/>
         <non_proxy_hosts/>
         <master>N</master>
+        <sslMode>N</sslMode>
+      </slaveserver>
+      <slaveserver>
+        <name>CHPC</name>
+        <hostname>saprin.chpc.ac.za</hostname>
+        <port>8081</port>
+        <webAppName/>
+        <username>cluster</username>
+        <password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password>
+        <proxy_hostname/>
+        <proxy_port/>
+        <non_proxy_hosts/>
+        <master>Y</master>
         <sslMode>N</sslMode>
       </slaveserver>
       <slaveserver>
@@ -875,7 +875,7 @@
     <created_user>kherbst</created_user>
     <created_date>2018/01/18 15:23:19.704</created_date>
     <modified_user>kherbst</modified_user>
-    <modified_date>2019/09/25 15:09:13.546</modified_date>
+    <modified_date>2021/02/03 13:31:46.839</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -1710,135 +1710,102 @@
     <fields>
       <field>
         <name>CurrentNodeId</name>
-        <rename/>
       </field>
       <field>
         <name>IndividualUid</name>
-        <rename/>
       </field>
       <field>
         <name>Sex</name>
-        <rename/>
       </field>
       <field>
         <name>DoB</name>
-        <rename/>
       </field>
       <field>
         <name>DoD</name>
-        <rename/>
       </field>
       <field>
         <name>MotherUid</name>
-        <rename/>
       </field>
       <field>
         <name>MotherDead</name>
-        <rename/>
       </field>
       <field>
         <name>FatherUid</name>
-        <rename/>
       </field>
       <field>
         <name>FatherDead</name>
-        <rename/>
       </field>
       <field>
         <name>DayDate</name>
-        <rename/>
       </field>
       <field>
         <name>HouseholdUid</name>
-        <rename/>
       </field>
       <field>
         <name>LocationUid</name>
-        <rename/>
       </field>
       <field>
         <name>Resident</name>
-        <rename/>
       </field>
       <field>
         <name>Gap</name>
-        <rename/>
       </field>
       <field>
         <name>Enumeration</name>
-        <rename/>
       </field>
       <field>
         <name>Born</name>
-        <rename/>
       </field>
       <field>
         <name>Participation</name>
-        <rename/>
       </field>
       <field>
         <name>InMigration</name>
-        <rename/>
       </field>
       <field>
         <name>LocationEntry</name>
-        <rename/>
       </field>
       <field>
         <name>ExtResStart</name>
-        <rename/>
       </field>
       <field>
         <name>Died</name>
-        <rename/>
       </field>
       <field>
         <name>Refusal</name>
-        <rename/>
       </field>
       <field>
         <name>LostToFollowUp</name>
-        <rename/>
       </field>
       <field>
         <name>Current</name>
-        <rename/>
       </field>
       <field>
         <name>OutMigration</name>
-        <rename/>
       </field>
       <field>
         <name>LocationExit</name>
-        <rename/>
       </field>
       <field>
         <name>ExtResEnd</name>
-        <rename/>
       </field>
       <field>
         <name>MembershipStart</name>
-        <rename/>
       </field>
       <field>
         <name>MembershipEnd</name>
-        <rename/>
       </field>
       <field>
         <name>HHRelationshipTypeId</name>
-        <rename/>
       </field>
       <field>
         <name>Memberships</name>
-        <rename/>
       </field>
       <field>
         <name>GapStart</name>
-        <rename/>
       </field>
       <field>
         <name>GapEnd</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

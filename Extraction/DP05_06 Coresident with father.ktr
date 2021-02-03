@@ -6,7 +6,7 @@
     <trans_version>V1.1</trans_version>
     <trans_type>Normal</trans_type>
     <trans_status>1</trans_status>
-    <directory>/SAPRIN Core Dataset</directory>
+    <directory>/Extraction</directory>
     <parameters>
       <parameter>
         <name>DATA_PATH_1</name>
@@ -862,7 +862,7 @@
     <created_user>kherbst</created_user>
     <created_date>2018/01/18 15:23:20.234</created_date>
     <modified_user>kherbst</modified_user>
-    <modified_date>2019/01/14 14:18:47.019</modified_date>
+    <modified_date>2021/02/03 13:33:12.689</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -956,6 +956,7 @@
     </file>
     <limit>0</limit>
     <addfilenameresult>N</addfilenameresult>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -985,6 +986,7 @@
     </file>
     <limit>0</limit>
     <addfilenameresult>N</addfilenameresult>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1014,6 +1016,7 @@
       <add_to_result_filenames>N</add_to_result_filenames>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
     </file>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1052,6 +1055,7 @@
         <set_empty_string>N</set_empty_string>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1084,6 +1088,7 @@
       <value_precision>-1</value_precision>
       <replace_field/>
     </formula>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1133,6 +1138,7 @@
         <presorted>N</presorted>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1167,6 +1173,7 @@
         <rightvalue/>
       </condition>
     </compare>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1191,6 +1198,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1240,6 +1248,7 @@
         <presorted>N</presorted>
       </field>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1274,6 +1283,7 @@
         <rightvalue/>
       </condition>
     </compare>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1306,6 +1316,7 @@
       <key>FatherUid,DayDate</key>
       <key>ParentId,DayDate</key>
     </keys>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1330,6 +1341,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1369,6 +1381,7 @@
         <name>ParentDoD</name>
       </remove>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1400,7 +1413,6 @@
       </field>
       <field>
         <name>DayDate</name>
-        <rename/>
       </field>
       <field>
         <name>LocationUid</name>
@@ -1416,6 +1428,7 @@
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
+    <attributes/>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1434,4 +1447,5 @@
   <slave-step-copy-partition-distribution>
   </slave-step-copy-partition-distribution>
   <slave_transformation>N</slave_transformation>
+  <attributes/>
 </transformation>
