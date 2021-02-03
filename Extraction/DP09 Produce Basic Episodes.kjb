@@ -8,7 +8,7 @@
   <created_user>-</created_user>
   <created_date>2017/10/25 05:42:18.897</created_date>
   <modified_user>kherbst</modified_user>
-  <modified_date>2020/12/30 17:00:12.390</modified_date>
+  <modified_date>2021/02/03 14:29:51.579</modified_date>
   <parameters>
     </parameters>
   <slaveservers>
@@ -834,7 +834,7 @@
       <trans_object_id/>
       <filename/>
       <transname>DP09_05 Produce csv Episode File</transname>
-      <directory>/</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -874,7 +874,7 @@
       <trans_object_id/>
       <filename/>
       <transname>DP09_06 Produce Stata Episode File</transname>
-      <directory>/</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -1014,7 +1014,7 @@
       <trans_object_id/>
       <filename/>
       <transname>DP09_03 Produce Anonymisation Maps</transname>
-      <directory>/</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -1078,7 +1078,7 @@
       <trans_object_id/>
       <filename/>
       <transname>DP09_04 Anonymise Episodes</transname>
-      <directory>/</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -1196,7 +1196,7 @@
       <trans_object_id/>
       <filename/>
       <transname>DP09-10 Produce Age Yr Delivery Surveillance Episodes</transname>
-      <directory>/</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -1260,7 +1260,7 @@
       <trans_object_id/>
       <filename/>
       <transname>DP09-11 Fix Age Yr Delivery Surveillance Episodes</transname>
-      <directory>/</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -1324,7 +1324,7 @@
       <trans_object_id/>
       <filename/>
       <transname>DP09_12 Anonymise Yr Age Fertility Episodes</transname>
-      <directory>/</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -1388,7 +1388,7 @@
       <trans_object_id/>
       <filename/>
       <transname>DP09-13 Produce Stata YrAge Fertility Episode File</transname>
-      <directory>/</directory>
+      <directory>/Extraction</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
