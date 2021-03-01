@@ -8,7 +8,7 @@
   <created_user>-</created_user>
   <created_date>2017/10/25 05:42:18.897</created_date>
   <modified_user>kherbst</modified_user>
-  <modified_date>2021/02/03 18:45:46.925</modified_date>
+  <modified_date>2021/02/06 06:13:07.845</modified_date>
   <parameters>
     <parameter>
       <name>DATA_PATH_1</name>
@@ -703,12 +703,12 @@
       <fields>
         <field>
           <variable_name>NextStep</variable_name>
-          <variable_value>S02</variable_value>
+          <variable_value>S01</variable_value>
           <variable_type>CURRENT_JOB</variable_type>
         </field>
         <field>
           <variable_name>Version</variable_name>
-          <variable_value>2020.1</variable_value>
+          <variable_value>2021.1</variable_value>
           <variable_type>JVM</variable_type>
         </field>
       </fields>
