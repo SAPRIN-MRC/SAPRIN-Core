@@ -5,7 +5,7 @@
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <directory>/SAPRIN Core Dataset</directory>
+    <directory>/Extraction</directory>
     <parameters>
     </parameters>
     <log>
@@ -441,7 +441,7 @@
     <created_user>-</created_user>
     <created_date>2018/12/17 07:17:12.092</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2019/12/28 16:54:14.032</modified_date>
+    <modified_date>2021/02/03 18:46:25.907</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -843,6 +843,47 @@
     <GUI>
       <xloc>1008</xloc>
       <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Fix MembershipEnd</name>
+    <type>Formula</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <formula>
+      <field_name>MembershipEndn</field_name>
+      <formula_string>IF(OR([LostToFollowUp]=1;[Refusal]=1;[Died]=1);1;IF([Current]=1;0;[MembershipEnd]))</formula_string>
+      <value_type>Integer</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <replace_field>MembershipEnd</replace_field>
+    </formula>
+    <formula>
+      <field_name>ExtResEndN</field_name>
+      <formula_string>IF(AND([ExtResEnd]=1;[LostToFollowUp]=1);0;[ExtResEnd])</formula_string>
+      <value_type>Integer</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <replace_field>ExtResEnd</replace_field>
+    </formula>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1835</xloc>
+      <yloc>688</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1262,8 +1303,8 @@
     </GUI>
   </step>
   <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
+    <name>Placeholder</name>
+    <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1272,233 +1313,6 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fields>
-      <field>
-        <name>NodeId</name>
-        <rename/>
-      </field>
-      <field>
-        <name>IndividualUid</name>
-        <rename/>
-      </field>
-      <field>
-        <name>MotherUid</name>
-        <rename/>
-      </field>
-      <field>
-        <name>FatherUid</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Sex</name>
-        <rename/>
-      </field>
-      <field>
-        <name>DoB</name>
-        <rename/>
-      </field>
-      <field>
-        <name>DoD</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Age</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Year</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Episodes_1</name>
-        <rename>Episodes</rename>
-      </field>
-      <field>
-        <name>Episode_1</name>
-        <rename>Episode</rename>
-      </field>
-      <field>
-        <name>StartDate</name>
-        <rename/>
-      </field>
-      <field>
-        <name>EndDate</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Days</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Resident</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Gap</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Enumeration</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Born</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Participation</name>
-        <rename/>
-      </field>
-      <field>
-        <name>InMigration</name>
-        <rename/>
-      </field>
-      <field>
-        <name>LocationEntry</name>
-        <rename/>
-      </field>
-      <field>
-        <name>ExtResStart</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Died</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Refusal</name>
-        <rename/>
-      </field>
-      <field>
-        <name>LostToFollowUp</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Current</name>
-        <rename/>
-      </field>
-      <field>
-        <name>OutMigration</name>
-        <rename/>
-      </field>
-      <field>
-        <name>LocationExit</name>
-        <rename/>
-      </field>
-      <field>
-        <name>ExtResEnd</name>
-        <rename/>
-      </field>
-      <field>
-        <name>MembershipStart</name>
-        <rename/>
-      </field>
-      <field>
-        <name>MembershipEnd</name>
-        <rename/>
-      </field>
-      <field>
-        <name>GapStart</name>
-        <rename/>
-      </field>
-      <field>
-        <name>GapEnd</name>
-        <rename/>
-      </field>
-      <field>
-        <name>LocationUid</name>
-        <rename/>
-      </field>
-      <field>
-        <name>HouseholdUid</name>
-        <rename/>
-      </field>
-      <field>
-        <name>HHRelationshipTypeId</name>
-        <rename>HHRelation</rename>
-      </field>
-      <field>
-        <name>Memberships</name>
-        <rename/>
-      </field>
-      <field>
-        <name>Education</name>
-        <rename/>
-      </field>
-      <field>
-        <name>MaritalStatus</name>
-        <rename/>
-      </field>
-      <field>
-        <name>SEIdx</name>
-        <rename/>
-      </field>
-      <field>
-        <name>CurrentEmployment</name>
-        <rename/>
-      </field>
-      <field>
-        <name>EmploymentType</name>
-        <rename/>
-      </field>
-      <field>
-        <name>MotherCoResident</name>
-        <rename/>
-      </field>
-      <field>
-        <name>MotherDead</name>
-        <rename/>
-      </field>
-      <field>
-        <name>FatherCoResident</name>
-        <rename/>
-      </field>
-      <field>
-        <name>FatherDead</name>
-        <rename/>
-      </field>
-      <field>
-        <name>DwellingIdx</name>
-        <rename/>
-      </field>
-      <field>
-        <name>LifeStockIdx</name>
-        <rename/>
-      </field>
-      <field>
-        <name>ModerntAssetIdx</name>
-        <rename/>
-      </field>
-      <field>
-        <name>PowerSupplyIdx</name>
-        <rename/>
-      </field>
-      <field>
-        <name>WaterSanitationIdx</name>
-        <rename/>
-      </field>
-      <field>
-        <name>EducationObsDate</name>
-        <rename/>
-      </field>
-      <field>
-        <name>MaritalStatusObsDate</name>
-        <rename/>
-      </field>
-      <field>
-        <name>SEObsDate</name>
-        <rename/>
-      </field>
-      <field>
-        <name>EmploymentSector</name>
-        <rename/>
-      </field>
-      <field>
-        <name>LabourObsDate</name>
-        <rename>EmploymentObsDate</rename>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1508,109 +1322,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1988</xloc>
-      <yloc>688</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>SurveillanceEpisodes</name>
-    <type>CubeOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <file>
-      <name>${BaseDirectory}\${NodeDirectory}\${EpisodeDirectory}\SurveillanceEpisodes.cube</name>
-      <add_to_result_filenames>N</add_to_result_filenames>
-      <do_not_open_newfile_init>N</do_not_open_newfile_init>
-    </file>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>2141</xloc>
-      <yloc>688</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>SurveillanceEpisodesTmp</name>
-    <type>CubeInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <file>
-      <name>${BaseDirectory}\${NodeDirectory}\${EpisodeDirectory}\SurveillanceEpisodesTmp.cube</name>
-    </file>
-    <limit>0</limit>
-    <addfilenameresult>N</addfilenameresult>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>80</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Fix MembershipEnd</name>
-    <type>Formula</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <formula>
-      <field_name>MembershipEndn</field_name>
-      <formula_string>IF(OR([LostToFollowUp]=1;[Refusal]=1;[Died]=1);1;IF([Current]=1;0;[MembershipEnd]))</formula_string>
-      <value_type>Integer</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <replace_field>MembershipEnd</replace_field>
-    </formula>
-    <formula>
-      <field_name>ExtResEndN</field_name>
-      <formula_string>IF(AND([ExtResEnd]=1;[LostToFollowUp]=1);0;[ExtResEnd])</formula_string>
-      <value_type>Integer</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <replace_field>ExtResEnd</replace_field>
-    </formula>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1835</xloc>
-      <yloc>688</yloc>
+      <xloc>720</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1656,6 +1369,206 @@
     </remotesteps>
     <GUI>
       <xloc>1682</xloc>
+      <yloc>688</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>NodeId</name>
+      </field>
+      <field>
+        <name>IndividualUid</name>
+      </field>
+      <field>
+        <name>MotherUid</name>
+      </field>
+      <field>
+        <name>FatherUid</name>
+      </field>
+      <field>
+        <name>Sex</name>
+      </field>
+      <field>
+        <name>DoB</name>
+      </field>
+      <field>
+        <name>DoD</name>
+      </field>
+      <field>
+        <name>Age</name>
+      </field>
+      <field>
+        <name>Year</name>
+      </field>
+      <field>
+        <name>Episodes_1</name>
+        <rename>Episodes</rename>
+      </field>
+      <field>
+        <name>Episode_1</name>
+        <rename>Episode</rename>
+      </field>
+      <field>
+        <name>StartDate</name>
+      </field>
+      <field>
+        <name>EndDate</name>
+      </field>
+      <field>
+        <name>Days</name>
+      </field>
+      <field>
+        <name>Resident</name>
+      </field>
+      <field>
+        <name>Gap</name>
+      </field>
+      <field>
+        <name>Enumeration</name>
+      </field>
+      <field>
+        <name>Born</name>
+      </field>
+      <field>
+        <name>Participation</name>
+      </field>
+      <field>
+        <name>InMigration</name>
+      </field>
+      <field>
+        <name>LocationEntry</name>
+      </field>
+      <field>
+        <name>ExtResStart</name>
+      </field>
+      <field>
+        <name>Died</name>
+      </field>
+      <field>
+        <name>Refusal</name>
+      </field>
+      <field>
+        <name>LostToFollowUp</name>
+      </field>
+      <field>
+        <name>Current</name>
+      </field>
+      <field>
+        <name>OutMigration</name>
+      </field>
+      <field>
+        <name>LocationExit</name>
+      </field>
+      <field>
+        <name>ExtResEnd</name>
+      </field>
+      <field>
+        <name>MembershipStart</name>
+      </field>
+      <field>
+        <name>MembershipEnd</name>
+      </field>
+      <field>
+        <name>GapStart</name>
+      </field>
+      <field>
+        <name>GapEnd</name>
+      </field>
+      <field>
+        <name>LocationUid</name>
+      </field>
+      <field>
+        <name>HouseholdUid</name>
+      </field>
+      <field>
+        <name>HHRelationshipTypeId</name>
+        <rename>HHRelation</rename>
+      </field>
+      <field>
+        <name>Memberships</name>
+      </field>
+      <field>
+        <name>Education</name>
+      </field>
+      <field>
+        <name>MaritalStatus</name>
+      </field>
+      <field>
+        <name>SEIdx</name>
+      </field>
+      <field>
+        <name>CurrentEmployment</name>
+      </field>
+      <field>
+        <name>EmploymentType</name>
+      </field>
+      <field>
+        <name>MotherCoResident</name>
+      </field>
+      <field>
+        <name>MotherDead</name>
+      </field>
+      <field>
+        <name>FatherCoResident</name>
+      </field>
+      <field>
+        <name>FatherDead</name>
+      </field>
+      <field>
+        <name>DwellingIdx</name>
+      </field>
+      <field>
+        <name>LifeStockIdx</name>
+      </field>
+      <field>
+        <name>ModerntAssetIdx</name>
+      </field>
+      <field>
+        <name>PowerSupplyIdx</name>
+      </field>
+      <field>
+        <name>WaterSanitationIdx</name>
+      </field>
+      <field>
+        <name>EducationObsDate</name>
+      </field>
+      <field>
+        <name>MaritalStatusObsDate</name>
+      </field>
+      <field>
+        <name>SEObsDate</name>
+      </field>
+      <field>
+        <name>EmploymentSector</name>
+      </field>
+      <field>
+        <name>LabourObsDate</name>
+        <rename>EmploymentObsDate</rename>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1988</xloc>
       <yloc>688</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1723,8 +1636,8 @@ var isCurrent=0;
     </GUI>
   </step>
   <step>
-    <name>Placeholder</name>
-    <type>Dummy</type>
+    <name>SurveillanceEpisodes</name>
+    <type>CubeOutput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1733,6 +1646,11 @@ var isCurrent=0;
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <file>
+      <name>${BaseDirectory}\${NodeDirectory}\${EpisodeDirectory}\SurveillanceEpisodes.cube</name>
+      <add_to_result_filenames>N</add_to_result_filenames>
+      <do_not_open_newfile_init>N</do_not_open_newfile_init>
+    </file>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1742,8 +1660,38 @@ var isCurrent=0;
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>400</yloc>
+      <xloc>2141</xloc>
+      <yloc>688</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>SurveillanceEpisodesTmp</name>
+    <type>CubeInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <file>
+      <name>${BaseDirectory}\${NodeDirectory}\${EpisodeDirectory}\SurveillanceEpisodesTmp.cube</name>
+    </file>
+    <limit>0</limit>
+    <addfilenameresult>N</addfilenameresult>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
