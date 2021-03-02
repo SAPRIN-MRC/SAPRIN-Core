@@ -8,7 +8,7 @@
   <created_user>-</created_user>
   <created_date>2017/10/25 05:42:18.897</created_date>
   <modified_user>kherbst</modified_user>
-  <modified_date>2021/02/06 06:13:07.845</modified_date>
+  <modified_date>2021/03/02 08:25:14.142</modified_date>
   <parameters>
     <parameter>
       <name>DATA_PATH_1</name>
@@ -708,7 +708,7 @@
         </field>
         <field>
           <variable_name>Version</variable_name>
-          <variable_value>2021.1</variable_value>
+          <variable_value>2021.2</variable_value>
           <variable_type>JVM</variable_type>
         </field>
       </fields>
