@@ -8,7 +8,7 @@
   <created_user>-</created_user>
   <created_date>2017/10/20 07:48:47.958</created_date>
   <modified_user>kherbst</modified_user>
-  <modified_date>2021/02/25 05:33:42.322</modified_date>
+  <modified_date>2021/03/03 09:56:06.453</modified_date>
   <parameters>
     <parameter>
       <name>DATA_PATH_1</name>
@@ -698,7 +698,7 @@
       <fields>
         <field>
           <variable_name>NextStep</variable_name>
-          <variable_value>S06</variable_value>
+          <variable_value>S01</variable_value>
           <variable_type>CURRENT_JOB</variable_type>
         </field>
       </fields>
