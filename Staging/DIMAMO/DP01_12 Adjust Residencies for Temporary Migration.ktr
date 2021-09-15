@@ -2,10 +2,10 @@
   <info>
     <name>DP01_12 Adjust Residencies for Temporary Migration</name>
     <description/>
-    <extended_description/>
-    <trans_version/>
+    <extended_description>V2 9 Sept 2021 excluded null ResidentStatusCodes</extended_description>
+    <trans_version>2</trans_version>
     <trans_type>Normal</trans_type>
-    <trans_status>0</trans_status>
+    <trans_status>2</trans_status>
     <directory>/Staging/DIMAMO</directory>
     <parameters>
     </parameters>
@@ -481,7 +481,7 @@
     <created_user>-</created_user>
     <created_date>2020/01/10 08:53:00.845</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2021/01/01 06:19:46.370</modified_date>
+    <modified_date>2021/09/09 10:45:42.639</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -2057,7 +2057,8 @@ WITH ExpandedStatus AS (
   FROM dbo.IndividualObservations IO
     JOIN dbo.Events EO ON IO.ObservationUid=EO.EventUid
     JOIN dbo.Observations O ON IO.ObservationUid=O.EventUid
-),
+  WHERE ResidentStatus>0
+     OR NOT ResStatusCode IS NULL),
 SmoothedStatus AS (
   SELECT
     IndividualUid,
@@ -2078,11 +2079,11 @@ SELECT
     WHEN ResStatusCode = 'P' THEN CAST(1 AS int)
 	WHEN ResStatusCode = 'O' AND ResidentStatus>6 THEN CAST(1 AS int)
 	WHEN ResStatusCode = 'O' AND ResidentStatus&lt;=6 THEN CAST(2 AS int)
-	WHEN ResStatusCode IN ('X','Q') AND (ResidentStatus>6) THEN CAST(1 AS int)
+	WHEN ResStatusCode IN ('X','Q') AND (ResidentStatus>=6) THEN CAST(1 AS int)
 	WHEN ResStatusCode IN ('X','Q') AND (ResidentStatus&lt;6) THEN CAST(2 AS int)
 	WHEN ResStatusCode IN ('X','Q') THEN CAST(1 AS int)
 	WHEN ResStatusCode &lt;&gt; 'P' THEN CAST(2 AS int)
-	WHEN ResidentStatus>6 THEN CAST(1 AS int)
+	WHEN ResidentStatus &lt; 6 THEN CAST(2 AS int)
 	ELSE CAST(1 AS int)
   END ResidentStatus -- 1 Resident 2 Non-resident
 FROM SmoothedStatus</sql>
