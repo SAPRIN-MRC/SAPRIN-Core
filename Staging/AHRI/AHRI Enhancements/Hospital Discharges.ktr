@@ -424,11 +424,11 @@
     <slaveservers>
       <slaveserver>
         <name>CHPC</name>
-        <hostname>saprin.chpc.ac.za</hostname>
-        <port>8081</port>
+        <hostname></hostname>
+        <port></port>
         <webAppName/>
-        <username>cluster</username>
-        <password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password>
+        <username></username>
+        <password></password>
         <proxy_hostname/>
         <proxy_port/>
         <non_proxy_hosts/>
